@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#9b6dcc">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="胡律师">
+<link rel="manifest" href="/my-workbench/manifest.json">
+<link rel="apple-touch-icon" href="/my-workbench/icon-192.png">
 <title>胡律师</title>
 <style>
   :root{
@@ -956,6 +962,15 @@ setInterval(async()=>{
   const ok=await syncFromCloud();
   if(ok){renderTasks();renderStudyCheckin();renderFit();renderSettings();}
 },60000);
+
+/* ===== 注册 PWA Service Worker ===== */
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('/my-workbench/service-worker.js')
+      .then(reg=>console.log('Service Worker 注册成功:',reg.scope))
+      .catch(err=>console.log('Service Worker 注册失败:',err));
+  });
+}
 </script>
 </body>
 </html>
