@@ -1,11 +1,11 @@
 // 胡律师 - Service Worker（PWA 离线缓存）
-const CACHE_NAME = 'hulvshi-v1';
+const CACHE_NAME = 'hulvshi-v2';
 const URLS_TO_CACHE = [
-  '/my-workbench/',
-  '/my-workbench/index.html',
-  '/my-workbench/manifest.json',
-  '/my-workbench/icon-192.png',
-  '/my-workbench/icon-512.png'
+  './',
+  './index.html',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', event => {

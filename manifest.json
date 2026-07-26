@@ -1,24 +1,39 @@
 {
+  "id": "/my-workbench/",
   "name": "胡律师",
   "short_name": "胡律师",
   "description": "胡律师的每日工作台 - 计划、学习、新闻、锻炼",
   "start_url": "/my-workbench/",
+  "scope": "/my-workbench/",
   "display": "standalone",
-  "background_color": "#fef0f5",
-  "theme_color": "#9b6dcc",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#faf5f8",
+  "theme_color": "#7c5aaa",
   "orientation": "portrait",
   "icons": [
     {
       "src": "/my-workbench/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/my-workbench/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/my-workbench/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/my-workbench/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "categories": ["productivity", "lifestyle"],
